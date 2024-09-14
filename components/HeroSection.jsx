@@ -13,8 +13,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black opacity-40"></div>
 
       {/* Texto na parte inferior */}
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6 mt-40">
-        <h1 className="text-4xl md:text-6xl font-bold">Preparados para crescer?</h1>
+      <div className="absolute bottom-0 left-0 w-full flex flex-col justify-end items-center text-center text-white px-6 pb-24">        <h1 className="text-4xl md:text-6xl font-bold">Preparados para crescer?</h1>
         <p className="mt-4 text-lg md:text-2xl">Nós vamos te ajudar a alcançar o próximo nível de crescimento da sua empresa.</p>
       </div>
     </div>

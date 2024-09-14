@@ -24,6 +24,30 @@ export default function Carousel() {
     return () => clearInterval(timer)
   }, [])
 
+  const transitionVariants = {
+    initial: { 
+      opacity: 0, 
+      x: '-100%',  // Vindo da esquerda
+      rotate: -45, // Rotação gráfica acentuada
+      scale: 0.8, 
+      filter: 'brightness(0.5) contrast(2) saturate(2)' // Efeitos visuais fortes
+    },
+    animate: { 
+      opacity: 1, 
+      x: 0,       // Centralizado
+      rotate: 0,  // Rotação ajustada
+      scale: 1, 
+      filter: 'brightness(1) contrast(1) saturate(1)'  // Efeito gráfico ajustado
+    },
+    exit: { 
+      opacity: 0, 
+      x: '100%',  // Saindo para a direita
+      rotate: 45, // Rotação gráfica
+      scale: 1.2, 
+      filter: 'brightness(0.5) contrast(2) saturate(2)' // Forte ao sair
+    },
+  }
+
   return (
     <Card className="w-full h-full overflow-hidden relative rounded-none">
       <div className="absolute inset-0">
@@ -31,10 +55,11 @@ export default function Carousel() {
           <motion.div
             key={currentIndex}
             className="absolute inset-0"
-            initial={{ y: '100%' }}
-            animate={{ y: 0 }}
-            exit={{ y: '-100%' }}
-            transition={{ duration: 0.7, ease: 'easeInOut' }}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={transitionVariants}
+            transition={{ duration: 1, ease: 'easeInOut' }}  // Transição rápida e gráfica
           >
             <Image
               src={images[currentIndex]}
