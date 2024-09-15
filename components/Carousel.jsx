@@ -27,29 +27,26 @@ export default function Carousel() {
   const transitionVariants = {
     initial: { 
       opacity: 0, 
-      x: '-100%',  // Vindo da esquerda
-      rotate: -45, // Rotação gráfica acentuada
-      scale: 0.8, 
-      filter: 'brightness(0.5) contrast(2) saturate(2)' // Efeitos visuais fortes
+      scale: 1.2, 
+      rotate: 10,
+      filter: 'blur(10px)' 
     },
     animate: { 
       opacity: 1, 
-      x: 0,       // Centralizado
-      rotate: 0,  // Rotação ajustada
       scale: 1, 
-      filter: 'brightness(1) contrast(1) saturate(1)'  // Efeito gráfico ajustado
+      rotate: 0,
+      filter: 'blur(0px)' 
     },
     exit: { 
       opacity: 0, 
-      x: '100%',  // Saindo para a direita
-      rotate: 45, // Rotação gráfica
-      scale: 1.2, 
-      filter: 'brightness(0.5) contrast(2) saturate(2)' // Forte ao sair
+      scale: 0.8, 
+      rotate: -10,
+      filter: 'blur(10px)' 
     },
   }
 
   return (
-    <Card className="w-full h-full overflow-hidden relative rounded-none">
+    <Card className="w-full h-full overflow-hidden relative rounded-none bg-sky-800">
       <div className="absolute inset-0">
         <AnimatePresence initial={false}>
           <motion.div
@@ -59,7 +56,7 @@ export default function Carousel() {
             animate="animate"
             exit="exit"
             variants={transitionVariants}
-            transition={{ duration: 1, ease: 'easeInOut' }}  // Transição rápida e gráfica
+            transition={{ duration: 1.2, ease: 'easeInOut' }} // Efeito mais longo e suave
           >
             <Image
               src={images[currentIndex]}
