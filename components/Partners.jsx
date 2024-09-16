@@ -13,33 +13,27 @@ const logos = [
   <FaSpotify size={60} />,
 ];
 
-export default function Partners() {
+export default function LogoCarousel() {
   return (
     <div className="flex flex-col items-center py-12 w-full overflow-hidden">
       {/* Título Centralizado */}
       <h1 className="text-4xl font-bold mb-8 text-center">Parceiros</h1>
 
       {/* Contêiner do carousel */}
-      <div className="relative w-full">
+      <div className="relative w-full overflow-hidden">
         {/* Faixa de logos animada */}
         <motion.div
-          className="flex w-full"
+          className="flex"
           animate={{ x: ['0%', '-100%'] }} // Movimento contínuo da direita para a esquerda
           transition={{
             repeat: Infinity,
-            duration: 30, // Velocidade do movimento
-            ease: 'linear', // Movimento suave e contínuo
+            duration: 20, // Ajuste para garantir que o movimento seja lento e contínuo
+            ease: 'linear',
           }}
         >
-          {/* Mapeamos as logos sem duplicá-las na tela */}
-          {logos.map((logo, index) => (
-            <div key={index} className="flex-shrink-0 w-1/7 flex justify-center px-8">
-              {logo}
-            </div>
-          ))}
-          {/* Mapeamos as mesmas logos novamente para o loop ser seamless */}
-          {logos.map((logo, index) => (
-            <div key={index + logos.length} className="flex-shrink-0 w-1/7 flex justify-center px-8">
+          {/* Mapeamos as logos e as duplicamos para criar um loop sem interrupções */}
+          {logos.concat(logos).map((logo, index) => (
+            <div key={index} className="flex-shrink-0 w-[14.28%] flex justify-center px-6">
               {logo}
             </div>
           ))}
