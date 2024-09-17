@@ -1,9 +1,75 @@
-import React from 'react'
+"use client"
+import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
-function Footer() {
+export default function Footer() {
   return (
-    <div>Oi, eu sou um footer!</div>
-  )
-}
+    <footer className="bg-slate-800 text-white py-12">
+      <div className="max-w-5xl mx-auto flex flex-col">
+        {/* Primeira Div - Container principal */}
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-start">
+            {/* Primeira Coluna */}
+            <div className="w-2/3">
+              <p className="text-sky-500 font-black text-2xl">
+                Olivieri<span className="text-slate-200 font-semibold">Risk</span>Advisors
+              </p>
+              <p className="mt-4 text-sm text-slate-300 max-w-sm">
+                A sua empresa especializada em seguros empresariais para todos os setores.
+              </p>
 
-export default Footer
+              {/* Botões de Redes Sociais */}
+              <div className="flex space-x-4 mt-6">
+                {/* E-mail */}
+                <motion.a
+                  whileHover={{ scale: 1.1, backgroundColor: '#f56565' }}
+                  className="bg-slate-600 p-3 rounded-full flex items-center justify-center"
+                  href="mailto:contato@olivieririsk.com"
+                >
+                  <FaEnvelope size={20} />
+                </motion.a>
+                {/* LinkedIn */}
+                <motion.a
+                  whileHover={{ scale: 1.1, backgroundColor: '#0077b5' }}
+                  className="bg-slate-600 p-3 rounded-full flex items-center justify-center"
+                  href="https://www.linkedin.com"
+                >
+                  <FaLinkedin size={20} />
+                </motion.a>
+                {/* Telefone */}
+                <motion.a
+                  whileHover={{ scale: 1.1, backgroundColor: '#48bb78' }}
+                  className="bg-slate-600 p-3 rounded-full flex items-center justify-center"
+                  href="tel:+5511999999999"
+                >
+                  <FaPhone size={20} />
+                </motion.a>
+              </div>
+            </div>
+
+            {/* Segunda Coluna */}
+            <div className="w-1/3 ml-auto">
+              <h1 className="text-lg font-semibold mb-4">Sobre a Olivieri</h1>
+              <ul className="space-y-2">
+                <li className="text-slate-300">Seguro Empresarial</li>
+                <li className="text-slate-300">Benefícios</li>
+                <li className="text-slate-300">Parceiros</li>
+                <li className="text-slate-300">Contato</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="my-8">
+            <hr className="border-slate-600 max-w-2xl mx-auto" />
+          </div>
+
+          {/* Segunda Div - Copyright */}
+          <div className="text-center">
+            <p className="text-sm text-slate-400">Copyright 2024 Olivieri Risk Advisors</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

@@ -17,7 +17,7 @@ export default function LogoCarousel() {
   return (
     <div className="flex flex-col items-center py-12 w-full overflow-hidden">
       {/* Título Centralizado */}
-      <h1 className="text-4xl font-bold mb-8 text-center">Parceiros</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center py-8 pb-8">Parceiros</h1>
 
       {/* Contêiner do carousel */}
       <div className="relative w-full overflow-hidden">
