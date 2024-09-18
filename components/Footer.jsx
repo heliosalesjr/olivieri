@@ -3,6 +3,9 @@ import { FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
+
+  const year = new Date().getFullYear();
+
   return (
     <footer className="bg-slate-800 text-white py-12">
       <div className="max-w-5xl mx-auto flex flex-col">
@@ -66,7 +69,7 @@ export default function Footer() {
 
           {/* Segunda Div - Copyright */}
           <div className="text-center">
-            <p className="text-sm text-slate-400">Copyright 2024 Olivieri Risk Advisors</p>
+            <p className="text-sm text-slate-400">Copyright {year} Olivieri Risk Advisors</p>
           </div>
         </div>
       </div>
