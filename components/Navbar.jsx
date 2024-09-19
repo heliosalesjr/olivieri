@@ -1,47 +1,41 @@
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@nextui-org/react";
-
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from "@nextui-org/react";
 
 export default function MyNavbar() {
   return (
     <Navbar shouldHideOnScroll className="bg-slate-100">
+      {/* Marca */}
       <NavbarBrand>
-        
-        <p className="text-slate-900 font-black">Olivieri<span className=" text-slate-500 font-semibold">Risk</span>Advisors</p>
+        <p className="text-slate-900 font-black">
+          Olivieri
+          <span className=" text-slate-500 font-semibold">Risk</span>
+          Advisors
+        </p>
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem isActive>
-          <Link href="/posts">
-            Home
-          </Link>
-        </NavbarItem>
-        <NavbarItem >
-          <Link href="/contact" aria-current="page">
-            Seguro Empresarial
-          </Link>
-        </NavbarItem>
 
-        <NavbarItem >
-          <Link href="/contact" aria-current="page">
-            Benefícios
-          </Link>
-        </NavbarItem>
+      {/* Conteúdo do Navbar distribuído */}
+      <NavbarContent className="w-full justify-between">
+        <div className="flex items-center gap-4">
+          <NavbarItem isActive>
+            <Link href="/posts">Home</Link>
+          </NavbarItem>
 
-        <NavbarItem >
-          <Link href="/contact" aria-current="page">
-            Parceiros
-          </Link>
-        </NavbarItem>
+          <NavbarItem>
+            <Link href="/contact">Seguro Empresarial</Link>
+          </NavbarItem>
 
-        <NavbarItem >
-          <Link href="/contact" aria-current="page">
-            Contato
-          </Link>
+          <NavbarItem>
+            <Link href="/contact">Benefícios</Link>
+          </NavbarItem>
+
+          <NavbarItem>
+            <Link href="/contact">Parceiros</Link>
+          </NavbarItem>
+        </div>
+
+        {/* Último item à direita */}
+        <NavbarItem>
+          <Link href="/contact">Contato</Link>
         </NavbarItem>
-        
-      </NavbarContent>
-      <NavbarContent justify="end">
-       
-        
       </NavbarContent>
     </Navbar>
   );
