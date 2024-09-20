@@ -1,6 +1,7 @@
 "use client" 
 import React, { useState } from 'react';
 import './contact.css';
+import Swal from 'sweetalert2';
 
 export function Contact() {
     const [result, setResult] = useState(null);
@@ -25,7 +26,11 @@ export function Contact() {
         const data = await response.json();
 
         if (data.success) {
-            setResult("Form Submitted Successfully");
+            Swal.fire({
+                title: "Muito obrigado",
+                text: "Sua mensagem foi enviada!",
+                icon: "success"
+              });
             e.target.reset();  // Reset the form after successful submission
         } else {
             console.log("Error", data);
