@@ -14,7 +14,7 @@ export default function MyNavbar() {
 
       {/* Conteúdo do Navbar distribuído */}
       <NavbarContent className="w-full justify-between">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-8">
           <NavbarItem isActive>
             <Link href="/posts">Home</Link>
           </NavbarItem>
