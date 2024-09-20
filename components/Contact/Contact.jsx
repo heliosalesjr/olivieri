@@ -27,7 +27,7 @@ export function Contact() {
 
         if (data.success) {
             Swal.fire({
-                title: "Muito obrigado",
+                title: "Muito obrigado, vagabunda!",
                 text: "Sua mensagem foi enviada!",
                 icon: "success"
               });

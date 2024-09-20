@@ -11,22 +11,25 @@ export default function WhoWeAre() {
   return (
     <div className="bg-slate-600 p-8 ">
       <div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Primeira Coluna */}
-          <div className="flex flex-col justify-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Nossos Valores</h1>
-            <p className="text-slate-200 mb-6">Promovemos os princípios que orientam nossas ações e decisões.</p>
-            <button className="bg-sky-500 text-white py-2 px-4 rounded hover:bg-sky-600 transition-colors">
-              Saiba mais
-            </button>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Primeira Coluna - Imagem */}
+          <div className="flex justify-center items-center">
+            <img src="/img/roi.jpg" alt="Imagem da diretora" className="rounded-lg my-4 object-cover h-full w-full" />
           </div>
 
-          {/* Segunda Coluna */}
+          {/* Segunda Coluna - Texto */}
+          <div className="flex flex-col justify-center">
+            <h1 className="text-4xl font-bold text-white mb-4">Quem lidera</h1>
+            <p className='text-sm text-white font-semibold py-4'>Diretora Executiva de Operações</p>
+            <p className="text-white mb-6">Rosália Olivieri é uma das referências no mercado de seguros, com mais de 20 anos de experiência consolidada em todo o território nacional. Apaixonada pelo que faz, ela combina conhecimento técnico com uma visão inovadora, sempre focada em entregar soluções personalizadas e eficientes. Sua liderança inspira confiança e traz resultados, tanto para a empresa quanto para seus clientes.</p>
+          </div>
+
+          {/* Terceira Coluna - Cards */}
           <div className="grid grid-rows-4 gap-4">
             {cardsData.map((card, index) => (
               <div key={index} className="flex bg-slate-700 p-4 rounded-lg shadow-md">
                 {/* Ícone */}
-                <div className="bg-slate-500 p-2 rounded-full flex items-center justify-center mr-4">
+                <div className="bg-slate-500 p-4 rounded-lg flex items-center justify-center mr-4 text-white">
                   {card.icon}
                 </div>
                 {/* Conteúdo do card */}

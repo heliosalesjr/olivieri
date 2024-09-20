@@ -46,28 +46,30 @@ export default function Services() {
     <div className="flex flex-col items-center justify-center py-12 bg-slate-100">
       {/* Título centralizado */}
       <h1 className="text-4xl font-bold mb-10 text-center">Serviços</h1>
-
-      {/* Grid de cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4 lg:px-24 mx-auto">
-        {servicesData.map((service, index) => (
-          <motion.div
-            key={index}
-            className="bg-white shadow-lg rounded-lg flex flex-col items-center justify-center text-center hover:shadow-xl transition-shadow duration-300"
-            style={{ aspectRatio: '1/1' }} // Definindo a proporção quadrada
-            initial="hidden"
-            animate="visible"
-            variants={cardVariants}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            {/* Ícone */}
-            <div className="text-sky-500 mb-4">{service.icon}</div>
-            {/* Título */}
-            <h1 className="text-2xl font-semibold mb-2 p-4">{service.title}</h1>
-            {/* Descrição */}
-            <p className="text-gray-600 p-4">{service.description}</p>
-          </motion.div>
-        ))}
+      <div className="max-w-7xl mx-auto">
+        {/* Grid de cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4 lg:px-24 mx-auto">
+          {servicesData.map((service, index) => (
+            <motion.div
+              key={index}
+              className="bg-white shadow-lg rounded-lg flex flex-col items-center justify-center text-center hover:shadow-xl transition-shadow duration-300"
+              style={{ aspectRatio: '1/1' }} // Definindo a proporção quadrada
+              initial="hidden"
+              animate="visible"
+              variants={cardVariants}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              {/* Ícone */}
+              <div className="text-sky-500 mb-4">{service.icon}</div>
+              {/* Título */}
+              <h1 className="text-2xl font-semibold mb-2 p-4">{service.title}</h1>
+              {/* Descrição */}
+              <p className="text-gray-600 p-4">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
+      
     </div>
   );
 }
