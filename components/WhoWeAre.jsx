@@ -1,4 +1,6 @@
+"use client";
 import { FaBolt, FaCheckCircle, FaLightbulb, FaShieldAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 export default function WhoWeAre() {
   const cardsData = [
@@ -11,35 +13,31 @@ export default function WhoWeAre() {
   return (
     <div className="bg-slate-600 p-8 ">
       <div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Primeira Coluna - Imagem */}
-          <div className="flex justify-center items-center">
-            <img src="/img/roi.jpg" alt="Imagem da diretora" className="rounded-lg my-4 object-cover h-full w-full" />
-          </div>
+          <motion.div className="flex justify-center items-center">
+            <motion.img
+              src="/img/roi3.jpeg"
+              alt="Imagem da diretora"
+              className="rounded-xl object-cover h-full w-full m-4"
+              initial={{ scale: 0.8, filter: 'blur(5px)' }}
+              animate={{ scale: 1, filter: 'blur(0)' }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
+              whileHover={{ scale: 0.9 }}
+            />
+          </motion.div>
 
           {/* Segunda Coluna - Texto */}
           <div className="flex flex-col justify-center">
-            <h1 className="text-4xl font-bold text-white mb-4">Quem lidera</h1>
-            <p className='text-sm text-white font-semibold py-4'>Diretora Executiva de Operações</p>
+            <h2 className="text-2xl text-white mb-4 font-black">Quem lidera</h2>
+            <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-pink-500 via-slate-200">Rosália Olivieri</h1>
+            <p className='text-sm text-white font-bold py-4'>Diretora Executiva de Operações</p>
             <p className="text-white mb-6">Rosália Olivieri é uma das referências no mercado de seguros, com mais de 20 anos de experiência consolidada em todo o território nacional. Apaixonada pelo que faz, ela combina conhecimento técnico com uma visão inovadora, sempre focada em entregar soluções personalizadas e eficientes. Sua liderança inspira confiança e traz resultados, tanto para a empresa quanto para seus clientes.</p>
           </div>
 
-          {/* Terceira Coluna - Cards */}
-          <div className="grid grid-rows-4 gap-4">
-            {cardsData.map((card, index) => (
-              <div key={index} className="flex bg-slate-700 p-4 rounded-lg shadow-md">
-                {/* Ícone */}
-                <div className="bg-slate-500 p-4 rounded-lg flex items-center justify-center mr-4 text-white">
-                  {card.icon}
-                </div>
-                {/* Conteúdo do card */}
-                <div>
-                  <h2 className="text-lg font-bold text-white">{card.title}</h2>
-                  <p className="text-slate-300">{card.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          
+            
+          
         </div>
       </div>
     </div>
