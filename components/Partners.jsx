@@ -33,7 +33,15 @@ export default function LogoCarousel() {
         >
           {/* Mapeamos as logos e as duplicamos para criar um loop sem interrupções */}
           {logos.concat(logos).map((logo, index) => (
-            <div key={index} className="flex-shrink-0 w-[14.28%] flex justify-center px-6">
+            <div 
+              key={index} 
+              className="flex-shrink-0 px-6 flex justify-center"
+              // Adicionamos uma largura responsiva que varia com o tamanho da tela
+              style={{
+                width: '14.28%', // Para telas grandes, 7 logos (100% / 7 ≈ 14.28%)
+                minWidth: '20%', // Para telas médias, 5 logos (100% / 5 = 20%)
+              }}
+            >
               {logo}
             </div>
           ))}
