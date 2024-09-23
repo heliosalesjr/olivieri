@@ -32,7 +32,7 @@ export default function WhoWeAre() {
             <h2 className="text-2xl text-white mb-4 font-black">Quem lidera</h2>
             <h1 className="text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-sky-500 to-pink-500 via-slate-200">Rosália Olivieri</h1>
             <p className='text-sm text-white font-bold py-4'>Diretora Executiva de Operações</p>
-            <p className="text-white mb-6">Rosália Olivieri é uma das referências no mercado de seguros, com mais de 20 anos de experiência consolidada em todo o território nacional. Apaixonada pelo que faz, ela combina conhecimento técnico com uma visão inovadora, sempre focada em entregar soluções personalizadas e eficientes. Sua liderança inspira confiança e traz resultados, tanto para a empresa quanto para seus clientes.</p>
+            <p className="text-white mb-6">Rosália Olivieri é uma das referências no mercado de seguros, com mais de 25 anos de experiência consolidada em todo o território nacional. Apaixonada pelo que faz, ela combina conhecimento técnico com uma visão inovadora, sempre focada em entregar soluções personalizadas e eficientes. Sua liderança inspira confiança e traz resultados, tanto para a empresa quanto para seus clientes.</p>
           </div>
 
           
