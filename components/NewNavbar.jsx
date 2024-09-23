@@ -33,9 +33,13 @@ export default function NewNavbar() {
           </p>
         </NavbarBrand>
 
-        {/* Ícone do menu hambúrguer à direita */}
+        {/* Ícone do menu hambúrguer à direita com área clicável aumentada */}
         <div className="sm:hidden">
-          <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+          <NavbarMenuToggle
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            className="p-3 hover:bg-gray-200 rounded-full transition duration-300 ease-in-out"
+            style={{ minWidth: "44px", minHeight: "44px" }} // Tamanho mínimo recomendado
+          />
         </div>
       </div>
 
@@ -64,7 +68,7 @@ export default function NewNavbar() {
               href={link.href}
               size="lg"
               style={{ display: 'block', textAlign: 'center' }}
-              className={`font-semibold text-primary-focus py-4 hover:text-purple-800 ${
+              className={`font-semibold text-primary-focus py-4 hover:text-purple-800  ${
                 pathname === link.href ? 'border-b-3 border-primary' : ''
               }`}
             >
