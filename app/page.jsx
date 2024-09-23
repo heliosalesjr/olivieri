@@ -1,7 +1,7 @@
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
-import MyNavbar from "@/components/Navbar";
+
 import NewNavbar from "@/components/NewNavbar";
 import Partners from "@/components/Partners";
 import Services from "@/components/Services";
