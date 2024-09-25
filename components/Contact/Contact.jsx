@@ -2,16 +2,33 @@
 import React, { useState } from 'react';
 import { FaBolt, FaCheckCircle, FaLightbulb, FaShieldAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import { motion } from 'framer-motion';
 import './contact.css';
 
 export function Contact() {
     const [result, setResult] = useState(null);
 
     const cardsData = [
-        { title: 'Empoderamento', description: 'Desenvolvemos autonomia e confiança.', icon: <FaBolt size={24} /> },
-        { title: 'Excelência', description: 'Buscamos os melhores resultados.', icon: <FaCheckCircle size={24} /> },
-        { title: 'Integridade', description: 'Agimos com ética e transparência.', icon: <FaShieldAlt size={24} /> },
-        { title: 'Inovação', description: 'Valorizamos ideias criativas.', icon: <FaLightbulb size={24} /> },
+        {
+            title: 'Empoderamento',
+            description: 'Desenvolvemos autonomia e confiança, promovendo uma cultura onde as pessoas têm o poder de tomar decisões e criar mudanças positivas em suas vidas e nas organizações.',
+            icon: <FaBolt size={24} />
+        },
+        {
+            title: 'Excelência',
+            description: 'Estamos comprometidos com a busca constante por qualidade e desempenho, oferecendo soluções que superam as expectativas e agregam valor contínuo aos nossos clientes.',
+            icon: <FaCheckCircle size={24} />
+        },
+        {
+            title: 'Integridade',
+            description: 'Agimos com ética e transparência em todas as nossas relações, garantindo que a confiança seja a base de todas as nossas interações e decisões.',
+            icon: <FaShieldAlt size={24} />
+        },
+        {
+            title: 'Inovação',
+            description: 'Valorizamos ideias criativas e novas abordagens, incentivando a exploração de possibilidades que podem transformar o futuro e gerar benefícios sustentáveis.',
+            icon: <FaLightbulb size={24} />
+        },
     ];
 
     async function handleSubmit(e) {
@@ -35,7 +52,7 @@ export function Contact() {
 
         if (data.success) {
             Swal.fire({
-                title: "Muito obrigado, vagabunda!",
+                title: "Muito obrigado!",
                 text: "Sua mensagem foi enviada!",
                 icon: "success"
             });
@@ -48,11 +65,20 @@ export function Contact() {
 
     return (
         <>
-            <section className="contact-container flex justify-center items-center">
+            <motion.section
+                className="contact-container flex justify-center items-center"
+                initial={{ backgroundPosition: "0% 50%" }}
+                animate={{ backgroundPosition: "100% 50%" }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                style={{
+                    background: "linear-gradient(90deg, #38bdf8 0%, #0f172a 100%)"
+                }}
+            >
                 <div className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                     
                     {/* Primeira coluna com os cards */}
                     <div className="flex flex-col justify-center items-center space-y-6">
+                        <h1 className="text-4xl font-bold text-center mb-8 text-white">No que acreditamos</h1>
                         {cardsData.map((card, index) => (
                             <div key={index} className="flex items-center p-4 border rounded-lg shadow-md bg-white">
                                 <div className="text-3xl text-blue-500 mr-4">
@@ -90,7 +116,7 @@ export function Contact() {
                     </div>
 
                 </div>
-            </section>
+            </motion.section>
         </>
     );
 }
