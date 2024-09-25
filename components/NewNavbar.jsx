@@ -20,15 +20,15 @@ export default function NewNavbar() {
       isBordered
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="px-4" // Ajuste de padding horizontal
+      className="px-4 bg-white bg-opacity-40" // Ajuste de padding horizontal
     >
       {/* Container principal com logo e ícone do menu hambúrguer */}
-      <div className="flex w-full justify-between items-center">
+      <div className="flex w-full justify-between items-center ">
         {/* Logo à esquerda */}
         <NavbarBrand>
           <p className="text-slate-900 font-black">
             Olivieri
-            <span className="text-slate-500 font-semibold">Risk</span>
+            <span className="text-sky-600 font-bold">Risk</span>
             Advisors
           </p>
         </NavbarBrand>
@@ -60,15 +60,15 @@ export default function NewNavbar() {
         ))}
       </NavbarContent>
 
-      {/* Menu para telas pequenas */}
-      <NavbarMenu>
+      {/* Menu para telas pequenas com background */}
+      <NavbarMenu className="bg-white bg-opacity-40 backdrop-blur-md">
         {links.map((link, index) => (
           <NavbarMenuItem key={index}>
             <Link
               href={link.href}
               size="lg"
               style={{ display: 'block', textAlign: 'center' }}
-              className={`font-semibold text-primary-focus py-4 hover:text-purple-800  ${
+              className={`font-semibold text-primary-focus py-4 hover:text-sky-900  ${
                 pathname === link.href ? 'border-b-3 border-primary' : ''
               }`}
             >
