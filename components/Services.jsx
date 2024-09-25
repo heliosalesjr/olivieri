@@ -43,7 +43,7 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <div className="flex flex-col items-center justify-center py-12 bg-slate-100">
+    <div id="seguro-empresarial" className="flex flex-col items-center justify-center py-12 bg-slate-100">
       {/* Título centralizado */}
       <h1 className="text-4xl font-bold mb-10 text-center">Serviços</h1>
       <div className="max-w-7xl mx-auto">

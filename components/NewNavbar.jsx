@@ -9,10 +9,10 @@ export default function NewNavbar() {
 
   const links = [
     { label: "Home", href: "/" },
-    { label: "Seguro Empresarial", href: "/a" },
-    { label: "Benefícios", href: "/s" },
-    { label: "Parceiros", href: "/d" },
-    { label: "Contato", href: "/f" },
+    { label: "Seguro Empresarial", href: "#seguro-empresarial" },
+    { label: "Benefícios", href: "#beneficios" },
+    { label: "Parceiros", href: "#parceiros" },
+    { label: "Contato", href: "#contato" },
   ];
 
   return (

@@ -74,7 +74,7 @@ export function Contact() {
                     background: "linear-gradient(90deg, #38bdf8 0%, #0f172a 100%)"
                 }}
             >
-                <div className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+                <div id="contato" className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                     
                     {/* Primeira coluna com os cards */}
                     <div className="flex flex-col justify-center items-center space-y-6">

@@ -15,7 +15,7 @@ export default function WhoWeAre() {
   };
 
   return (
-    <div className="bg-slate-600 p-8">
+    <div className="bg-slate-600 p-8" id="beneficios">
       <div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Primeira Coluna - Imagem */}
