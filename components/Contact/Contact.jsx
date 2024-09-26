@@ -81,11 +81,9 @@ export function Contact() {
                         <h1 className="text-4xl font-bold text-center mb-8 text-white">No que acreditamos</h1>
                         {cardsData.map((card, index) => (
                             <div key={index} className="flex items-center p-4 border rounded-lg shadow-md bg-white">
-                                <div className="text-3xl text-blue-500 mr-4">
-                                    {card.icon}
-                                </div>
-                                <div>
-                                    <h3 className="text-xl font-bold">{card.title}</h3>
+                                
+                                <div className='px-4'>
+                                    <h3 className="text-xl font-bold flex items-center pb-2 text-sky-500">{card.icon}<span className="ml-2 text-slate-800">{card.title}</span></h3>
                                     <p className="text-gray-600">{card.description}</p>
                                 </div>
                             </div>

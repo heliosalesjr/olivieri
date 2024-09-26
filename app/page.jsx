@@ -7,6 +7,7 @@ import Partners from "@/components/Partners";
 import Services from "@/components/Services";
 import FloatingWhatsAppButton from "@/components/Whatzapp";
 import WhoWeAre from "@/components/WhoWeAre";
+import Believe from "@/components/Believe";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Services />
       <WhoWeAre />
       <Partners />
+      <Believe />
       <Contact />
       <Footer />
       <FloatingWhatsAppButton />
