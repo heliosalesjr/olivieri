@@ -18,8 +18,9 @@ export default function Home() {
       <HeroSection />
       <Services />
       <WhoWeAre />
-      <Partners />
       <Believe />
+      <Partners />
+      
       <Contact />
       <Footer />
       <FloatingWhatsAppButton />

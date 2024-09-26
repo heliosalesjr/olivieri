@@ -46,10 +46,10 @@ export function Believe() {
 
             {/* Conteúdo dos cards */}
             <div id="contato" className="relative z-20 max-w-5xl w-full mx-auto p-6">
-                <h1 className="text-5xl font-bold text-center mb-8 text-white">No que acreditamos</h1>
+                <h1 className="text-3xl font-bold text-center mb-8 text-white pb-8 md:text-4xl lg:text-5xl">No que acreditamos</h1>
 
                 {/* Distribuição alternada dos cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                     {cardsData.map((card, index) => (
                         <div
                             key={index}

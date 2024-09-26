@@ -1,35 +1,10 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
-import { FaBolt, FaCheckCircle, FaLightbulb, FaShieldAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
-import { motion } from 'framer-motion';
 import './contact.css';
 
 export function Contact() {
     const [result, setResult] = useState(null);
-
-    const cardsData = [
-        {
-            title: 'Empoderamento',
-            description: 'Desenvolvemos autonomia e confiança, promovendo uma cultura onde as pessoas têm o poder de tomar decisões e criar mudanças positivas em suas vidas e nas organizações.',
-            icon: <FaBolt size={24} />
-        },
-        {
-            title: 'Excelência',
-            description: 'Estamos comprometidos com a busca constante por qualidade e desempenho, oferecendo soluções que superam as expectativas e agregam valor contínuo aos nossos clientes.',
-            icon: <FaCheckCircle size={24} />
-        },
-        {
-            title: 'Integridade',
-            description: 'Agimos com ética e transparência em todas as nossas relações, garantindo que a confiança seja a base de todas as nossas interações e decisões.',
-            icon: <FaShieldAlt size={24} />
-        },
-        {
-            title: 'Inovação',
-            description: 'Valorizamos ideias criativas e novas abordagens, incentivando a exploração de possibilidades que podem transformar o futuro e gerar benefícios sustentáveis.',
-            icon: <FaLightbulb size={24} />
-        },
-    ];
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -65,35 +40,29 @@ export function Contact() {
 
     return (
         <>
-            <motion.section
-                className="contact-container flex justify-center items-center"
-                initial={{ backgroundPosition: "0% 50%" }}
-                animate={{ backgroundPosition: "100% 50%" }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            <section
+                className="relative contact-container flex justify-center items-center"
                 style={{
-                    background: "linear-gradient(90deg, #38bdf8 0%, #0f172a 100%)"
+                    backgroundImage: "url('img/call3.jpg')", // Caminho da sua imagem
+                    backgroundSize: "cover",  // Faz a imagem cobrir todo o fundo
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    minHeight: "100vh", // Ocupa toda a altura da tela
                 }}
             >
-                <div id="contato" className="max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
+                {/* Camada de cor sobre a imagem para melhorar a legibilidade */}
+                <div className="absolute inset-0 bg-sky-800 opacity-40 z-10"></div>
+                
+                {/* Conteúdo */}
+                <div id="contato" className="relative z-20 max-w-6xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-6">
                     
-                    {/* Primeira coluna com os cards */}
-                    <div className="flex flex-col justify-center items-center space-y-6">
-                        <h1 className="text-4xl font-bold text-center mb-8 text-white">No que acreditamos</h1>
-                        {cardsData.map((card, index) => (
-                            <div key={index} className="flex items-center p-4 border rounded-lg shadow-md bg-white">
-                                
-                                <div className='px-4'>
-                                    <h3 className="text-xl font-bold flex items-center pb-2 text-sky-500">{card.icon}<span className="ml-2 text-slate-800">{card.title}</span></h3>
-                                    <p className="text-gray-600">{card.description}</p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    {/* Primeira coluna (h1 vazio) */}
+                    <h1 className="text-transparent">.</h1>
 
-                    {/* Segunda coluna com o formulário */}
+                    {/* Segunda coluna com o formulário, sem alterações */}
                     <div className="flex flex-col justify-center items-center">
                         <form onSubmit={handleSubmit} className="space-y-6 w-full">
-                            <h2 className="text-2xl font-bold mb-4 text-center">Fale com a gente</h2>
+                            <h2 className="text-3xl font-black mb-4 text-center text-slate-700">Fale conosco</h2>
                             <div className='input-box'>
                                 <label className="block mb-1">Nome</label>
                                 <input type="text" className="field w-full p-2 border rounded-md" placeholder="Seu nome" name="name" required />
@@ -112,9 +81,8 @@ export function Contact() {
                             {result && <p className="text-red-500 text-center">{result}</p>}
                         </form>
                     </div>
-
                 </div>
-            </motion.section>
+            </section>
         </>
     );
 }
