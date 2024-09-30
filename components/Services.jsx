@@ -7,7 +7,7 @@ const servicesData = [
   {
     title: "Seguro Garantia",
     description: "Oferece uma garantia financeira sólida para assegurar o cumprimento de contratos públicos e privados, proporcionando segurança em projetos de construção, fornecimento e prestação de serviços.",
-    icon: <FaShieldAlt size={30} />, // Ícones menores
+    icon: <FaShieldAlt size={30} />, 
   },
   {
     title: "Risco Engenharia",
@@ -37,7 +37,7 @@ const servicesData = [
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.8 }, // Efeito mais dramático na entrada
+  hidden: { opacity: 0, y: 50, scale: 0.8 },
   visible: { opacity: 1, y: 0, scale: 1 },
   exit: { opacity: 0, y: -50, scale: 0.8 },
 };
@@ -45,33 +45,27 @@ const cardVariants = {
 export default function Services() {
   return (
     <div id="seguro-empresarial" className="flex flex-col items-center justify-center py-12 bg-slate-100">
-      {/* Título centralizado */}
       <h1 className="text-4xl font-bold mb-10 text-center">Serviços</h1>
       <div className="max-w-7xl mx-auto">
-        {/* Grid de cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full px-4 lg:px-24 mx-auto">
           {servicesData.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-white shadow-lg rounded-lg p-8 flex flex-col items-start text-left transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
-              style={{ aspectRatio: '1/1' }} // Mantendo a proporção quadrada
+              className="bg-white shadow-lg rounded-lg p-8 flex flex-col items-start text-left transition-shadow duration-300"
+              style={{ aspectRatio: '1/1' }} 
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={cardVariants}
-              transition={{ duration: 0.8, delay: index * 0.2 }} // Transição mais lenta para mais drama
-              whileHover={{ scale: 1.05 }} // Sutil crescimento no hover
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              whileHover={{ boxShadow: "0px 0px 20px 5px rgba(14, 165, 233, 0.5)" }} // Sombras sky-500 no hover
             >
-              {/* Ícone dentro do retângulo */}
               <motion.div
                 className="bg-sky-500 p-2 rounded-lg text-white mb-6 transition-all duration-300"
-                whileHover={{ scale: 1.2 }} // Ícone aumenta no hover
               >
                 {service.icon}
               </motion.div>
-              {/* Título */}
               <h1 className="text-2xl font-semibold mb-4">{service.title}</h1>
-              {/* Descrição (texto mais detalhado) */}
               <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
