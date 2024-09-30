@@ -6,39 +6,40 @@ import { FaCar, FaHeartbeat, FaHardHat, FaBuilding, FaUsers, FaShieldAlt } from 
 const servicesData = [
   {
     title: "Seguro Garantia",
-    description: "Garantia financeira para seus projetos.",
-    icon: <FaShieldAlt size={40} />,
+    description: "Oferece uma garantia financeira sólida para assegurar o cumprimento de contratos públicos e privados, proporcionando segurança em projetos de construção, fornecimento e prestação de serviços.",
+    icon: <FaShieldAlt size={30} />, // Ícones menores
   },
   {
     title: "Risco Engenharia",
-    description: "Cobertura para obras e engenharia civil.",
-    icon: <FaHardHat size={40} />,
+    description: "Cobertura abrangente para projetos de engenharia civil, obras e construções, protegendo contra imprevistos que possam comprometer o cronograma ou causar prejuízos financeiros significativos.",
+    icon: <FaHardHat size={30} />,
   },
   {
     title: "Responsabilidade Civil",
-    description: "Proteção para riscos de responsabilidade.",
-    icon: <FaBuilding size={40} />,
+    description: "Protege sua empresa contra danos involuntários causados a terceiros, garantindo cobertura em casos de lesões corporais, danos materiais ou financeiros, gerando confiança e segurança jurídica.",
+    icon: <FaBuilding size={30} />,
   },
   {
     title: "Riscos Nomeados e Operacionais",
-    description: "Cobertura para riscos específicos e operacionais.",
-    icon: <FaUsers size={40} />,
+    description: "Seguros personalizados para cobrir riscos operacionais e nomeados específicos do seu negócio, garantindo proteção em situações adversas e imprevistas, minimizando impactos financeiros.",
+    icon: <FaUsers size={30} />,
   },
   {
     title: "Frota",
-    description: "Seguro especializado para sua frota de veículos.",
-    icon: <FaCar size={40} />,
+    description: "Seguro especializado para cobrir toda a sua frota de veículos, garantindo tranquilidade com a proteção contra acidentes, roubos e outros incidentes que podem ocorrer no transporte de cargas ou passageiros.",
+    icon: <FaCar size={30} />,
   },
   {
     title: "Saúde",
-    description: "Planos de saúde personalizados para sua empresa.",
-    icon: <FaHeartbeat size={40} />,
+    description: "Planos de saúde corporativos desenhados para atender as necessidades de empresas de todos os tamanhos, com cobertura completa para garantir o bem-estar dos colaboradores e suas famílias.",
+    icon: <FaHeartbeat size={30} />,
   },
 ];
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 50, scale: 0.8 }, // Efeito mais dramático na entrada
+  visible: { opacity: 1, y: 0, scale: 1 },
+  exit: { opacity: 0, y: -50, scale: 0.8 },
 };
 
 export default function Services() {
@@ -52,24 +53,30 @@ export default function Services() {
           {servicesData.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-white shadow-lg rounded-lg flex flex-col items-center justify-center text-center hover:shadow-xl transition-shadow duration-300"
-              style={{ aspectRatio: '1/1' }} // Definindo a proporção quadrada
+              className="bg-white shadow-lg rounded-lg p-8 flex flex-col items-start text-left transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+              style={{ aspectRatio: '1/1' }} // Mantendo a proporção quadrada
               initial="hidden"
               animate="visible"
+              exit="exit"
               variants={cardVariants}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }} // Transição mais lenta para mais drama
+              whileHover={{ scale: 1.05 }} // Sutil crescimento no hover
             >
-              {/* Ícone */}
-              <div className="text-sky-500 mb-4">{service.icon}</div>
+              {/* Ícone dentro do retângulo */}
+              <motion.div
+                className="bg-sky-500 p-2 rounded-lg text-white mb-6 transition-all duration-300"
+                whileHover={{ scale: 1.2 }} // Ícone aumenta no hover
+              >
+                {service.icon}
+              </motion.div>
               {/* Título */}
-              <h1 className="text-2xl font-semibold mb-2 p-4">{service.title}</h1>
-              {/* Descrição */}
-              <p className="text-gray-600 p-4">{service.description}</p>
+              <h1 className="text-2xl font-semibold mb-4">{service.title}</h1>
+              {/* Descrição (texto mais detalhado) */}
+              <p className="text-gray-600">{service.description}</p>
             </motion.div>
           ))}
         </div>
       </div>
-      
     </div>
   );
 }
