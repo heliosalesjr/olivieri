@@ -8,6 +8,7 @@ import Services from "@/components/Services";
 import FloatingWhatsAppButton from "@/components/Whatzapp";
 import WhoWeAre from "@/components/WhoWeAre";
 import Believe from "@/components/Believe";
+import ServicesAlt from "@/components/ServicesAlt";
 
 
 export default function Home() {
@@ -16,7 +17,8 @@ export default function Home() {
      
       <NewNavbar />
       <HeroSection />
-      <Services />
+     
+      <ServicesAlt />
       <WhoWeAre />
       <Believe />
       <Partners />
