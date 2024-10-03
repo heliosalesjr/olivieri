@@ -9,6 +9,7 @@ import FloatingWhatsAppButton from "@/components/Whatzapp";
 import WhoWeAre from "@/components/WhoWeAre";
 import Believe from "@/components/Believe";
 import ServicesAlt from "@/components/ServicesAlt";
+import NewPartners from "@/components/NewPartners";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <ServicesAlt />
       <WhoWeAre />
       <Believe />
+      <NewPartners />
       <Partners />
       
       <Contact />
