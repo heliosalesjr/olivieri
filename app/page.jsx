@@ -10,6 +10,7 @@ import WhoWeAre from "@/components/WhoWeAre";
 import Believe from "@/components/Believe";
 import ServicesAlt from "@/components/ServicesAlt";
 import NewPartners from "@/components/NewPartners";
+import AnotherHero from "@/components/AnotherHero";
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
      
       <NewNavbar />
       <HeroSection />
+      <AnotherHero  />
      
       <ServicesAlt />
       <WhoWeAre />
