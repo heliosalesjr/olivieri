@@ -18,7 +18,7 @@ export default function Home() {
     <>
      
       <NewNavbar />
-      <HeroSection />
+      
       <AnotherHero  />
      
       <ServicesAlt />
