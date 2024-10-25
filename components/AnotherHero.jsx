@@ -22,7 +22,7 @@ const AnotherHero = () => {
   }, [images.length]);
 
   return (
-    <div className="overflow-hidden bg-slate-200 h-[80vh] flex items-center pt-8 sm:pt-16 pb-8 sm:pb-16">
+    <div className="overflow-hidden bg-slate-50 h-[80vh] flex items-center pt-8 sm:pt-16 pb-8 sm:pb-16">
       <div className="container mx-auto px-6 max-w-5xl lg:flex lg:items-center lg:justify-between">
         
         {/* Texto e Botões */}
