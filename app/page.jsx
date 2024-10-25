@@ -11,13 +11,13 @@ import Believe from "@/components/Believe";
 import ServicesAlt from "@/components/ServicesAlt";
 import NewPartners from "@/components/NewPartners";
 import AnotherHero from "@/components/AnotherHero";
-
+import HeyHero from "@/components/HeyHero";
 
 export default function Home() {
   return (
     <>
-     
       <NewNavbar />
+      <HeyHero />
       
       <AnotherHero  />
      
