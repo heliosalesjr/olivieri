@@ -1,73 +1,58 @@
+"use client";
+
 import { FaBullhorn, FaBalanceScale, FaRobot, FaDollarSign, FaPencilRuler, FaCog } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
-const ServicesAlt = () => (
-  <section className="bg-white dark:bg-gray-900 max-w-6xl mx-auto">
-    <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
-      <div className="max-w-screen-md mb-8 lg:mb-16">
-        <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-          Serviços planejados para seu negócio
+const ServicesAlt = () => {
+  return (
+    <section className="bg-gradient-to-br from-purple-500 to-indigo-500 text-white max-w-7xl mx-auto py-16 px-6">
+      <div className="text-center mb-12">
+        <h2 className="text-5xl font-extrabold mb-4">
+          Serviços Planejados para seu Negócio
         </h2>
-        <p className="text-gray-500 sm:text-xl dark:text-gray-400">
-        Com o seguro garantia, seus projetos ganham mais segurança e credibilidade, garantindo cumprimento de contratos, proteção financeira e tranquilidade em negociações.        </p>
+        <p className="text-lg font-light text-white/80 max-w-2xl mx-auto">
+          Com o seguro garantia, seus projetos ganham mais segurança e credibilidade, garantindo o cumprimento de contratos e proteção financeira em negociações.
+        </p>
       </div>
-      <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-        <div>
-          <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-            <FaBullhorn className="w-6 h-6 text-primary-600 dark:text-primary-300" />
-          </div>
-          <h3 className="mb-2 text-xl font-bold dark:text-white">Seguro Garantia</h3>
-          <p className="text-gray-500 dark:text-gray-400">
-          Oferece uma garantia financeira sólida para assegurar o cumprimento de contratos públicos e privados, proporcionando segurança em projetos de construção, fornecimento e prestação de serviços.          </p>
-        </div>
-        <div>
-          <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-            <FaBalanceScale className="w-6 h-6 text-primary-600 dark:text-primary-300" />
-          </div>
-          <h3 className="mb-2 text-xl font-bold dark:text-white">Risco Engenharia</h3>
-          <p className="text-gray-500 dark:text-gray-400">
-          Cobertura abrangente para projetos de engenharia civil, obras e construções, protegendo contra imprevistos que possam comprometer o cronograma ou causar prejuízos financeiros significativos.          </p>
-        </div>
-        <div>
-          <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-            <FaRobot className="w-6 h-6 text-primary-600 dark:text-primary-300" />
-          </div>
-          <h3 className="mb-2 text-xl font-bold dark:text-white">Responsabilidade Civil
-          </h3>
-          <p className="text-gray-500 dark:text-gray-400">
-          Protege sua empresa contra danos involuntários causados a terceiros, garantindo cobertura em casos de lesões corporais, danos materiais ou financeiros, gerando confiança e segurança jurídica.          </p>
-        </div>
-        <div>
-          <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-            <FaDollarSign className="w-6 h-6 text-primary-600 dark:text-primary-300" />
-          </div>
-          <h3 className="mb-2 text-xl font-bold dark:text-white">Riscos Nomeados e Operacionais</h3>
-          <p className="text-gray-500 dark:text-gray-400">
-          Seguros personalizados para cobrir riscos operacionais e nomeados específicos do seu negócio, garantindo proteção em situações adversas e imprevistas, minimizando impactos financeiros.
-
-
-          </p>
-        </div>
-        <div>
-          <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-            <FaPencilRuler className="w-6 h-6 text-primary-600 dark:text-primary-300" />
-          </div>
-          <h3 className="mb-2 text-xl font-bold dark:text-white">Frota</h3>
-          <p className="text-gray-500 dark:text-gray-400">
-          Seguro especializado para cobrir toda a sua frota de veículos, garantindo tranquilidade com a proteção contra acidentes, roubos e outros incidentes que podem ocorrer no transporte de cargas ou passageiros.
-
-</p>
-        </div>
-        <div>
-          <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-primary-100 lg:h-12 lg:w-12 dark:bg-primary-900">
-            <FaCog className="w-6 h-6 text-primary-600 dark:text-primary-300" />
-          </div>
-          <h3 className="mb-2 text-xl font-bold dark:text-white">Saúde</h3>
-          <p className="text-gray-500 dark:text-gray-400">
-          Planos de saúde corporativos desenhados para atender as necessidades de empresas de todos os tamanhos, com cobertura completa para garantir o bem-estar dos colaboradores e suas famílias.          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-);
+      <motion.div
+        className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
+        initial="hidden"
+        animate="visible"
+        variants={{
+          visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
+          hidden: { opacity: 0, y: 20 },
+        }}
+      >
+        {[
+          { icon: <FaBullhorn className="w-8 h-8 text-white" />, title: "Seguro Garantia", text: "Oferece uma garantia financeira sólida para assegurar o cumprimento de contratos..." },
+          { icon: <FaBalanceScale className="w-8 h-8 text-white" />, title: "Risco Engenharia", text: "Cobertura para projetos de engenharia civil, obras e construções..." },
+          { icon: <FaRobot className="w-8 h-8 text-white" />, title: "Responsabilidade Civil", text: "Protege sua empresa contra danos involuntários causados a terceiros..." },
+          { icon: <FaDollarSign className="w-8 h-8 text-white" />, title: "Riscos Nomeados e Operacionais", text: "Seguros personalizados para cobrir riscos operacionais e específicos..." },
+          { icon: <FaPencilRuler className="w-8 h-8 text-white" />, title: "Frota", text: "Seguro especializado para cobrir toda a sua frota de veículos..." },
+          { icon: <FaCog className="w-8 h-8 text-white" />, title: "Saúde", text: "Planos de saúde corporativos desenhados para atender empresas..." },
+        ].map((service, index) => (
+          <motion.div
+            key={index}
+            className="p-8 bg-white text-gray-900 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            whileHover={{ scale: 1.05 }}
+            variants={{
+              hidden: { opacity: 0, scale: 0.9 },
+              visible: { opacity: 1, scale: 1 },
+            }}
+          >
+            <motion.div
+              className="flex justify-center items-center w-16 h-16 rounded-full bg-gradient-to-r from-teal-400 to-blue-500 mb-6"
+              whileHover={{ scale: 1.2 }}
+            >
+              {service.icon}
+            </motion.div>
+            <h3 className="text-xl font-bold mb-2 text-gray-800">{service.title}</h3>
+            <p className="text-gray-600">{service.text}</p>
+          </motion.div>
+        ))}
+      </motion.div>
+    </section>
+  );
+};
 
 export default ServicesAlt;
