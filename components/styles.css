@@ -1,0 +1,26 @@
+.believe-section {
+    /* Mesh Gradient */
+    background: radial-gradient(circle at 10% 20%, #38b2ac, transparent 30%), 
+                radial-gradient(circle at 80% 10%, #4299e1, transparent 30%), 
+                radial-gradient(circle at 20% 80%, #3182ce, transparent 30%), 
+                radial-gradient(circle at 90% 70%, #63b3ed, transparent 30%), 
+                radial-gradient(circle at 50% 50%, #81e6d9, transparent 30%), 
+                radial-gradient(circle at 50% 90%, #2c7a7b, transparent 30%), 
+                radial-gradient(circle at 80% 90%, #38b2ac, transparent 30%), 
+                radial-gradient(circle at 20% 20%, #4299e1, transparent 30%), 
+                radial-gradient(circle at 40% 60%, #2b6cb0, transparent 30%);
+    background-size: 200% 200%;
+    animation: meshMovement 20s ease-in-out infinite alternate;
+  }
+  
+  @keyframes meshMovement {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }

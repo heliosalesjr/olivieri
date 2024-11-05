@@ -12,6 +12,7 @@ import ServicesAlt from "@/components/ServicesAlt";
 import NewPartners from "@/components/NewPartners";
 import AnotherHero from "@/components/AnotherHero";
 import HeyHero from "@/components/HeyHero";
+import Services2 from "@/components/Services2";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       <HeyHero />
       
       <AnotherHero  />
-     
+      <Services2 />
       <ServicesAlt />
       <WhoWeAre />
       <Believe />
