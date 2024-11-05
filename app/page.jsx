@@ -14,6 +14,7 @@ import AnotherHero from "@/components/AnotherHero";
 import HeyHero from "@/components/HeyHero";
 import Services2 from "@/components/Services2";
 import FeaturesSection from "@/components/Content";
+import NewWhoWeAre from "@/components/NewWhoWeAre";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Services2 />
       <FeaturesSection />
       <ServicesAlt />
+      <NewWhoWeAre />
       <WhoWeAre />
       <Believe />
       <NewPartners />
