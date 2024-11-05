@@ -13,6 +13,7 @@ import NewPartners from "@/components/NewPartners";
 import AnotherHero from "@/components/AnotherHero";
 import HeyHero from "@/components/HeyHero";
 import Services2 from "@/components/Services2";
+import FeaturesSection from "@/components/Content";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       
       <AnotherHero  />
       <Services2 />
+      <FeaturesSection />
       <ServicesAlt />
       <WhoWeAre />
       <Believe />
