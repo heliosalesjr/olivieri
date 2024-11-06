@@ -1,37 +1,37 @@
 "use client";
 import React from "react";
-import { FaShieldAlt, FaCheckCircle, FaHeadset, FaBook, FaShippingFast, FaRobot } from "react-icons/fa";
+import { FaCar, FaHeartbeat, FaHardHat, FaBuilding, FaUsers, FaShieldAlt } from "react-icons/fa";
 
 const features = [
   {
-    icon: <FaShieldAlt className="text-green-500 w-8 h-8 mb-4" />,
-    title: "Layered security",
-    description: "With layered security, we ensure the safety of every unit we provide.",
+    title: "Seguro Garantia",
+    description: "Oferece uma garantia financeira sólida para assegurar o cumprimento de contratos públicos e privados, proporcionando segurança em projetos de construção, fornecimento e prestação de serviços.",
+    icon: <FaShieldAlt className="text-green-500 w-8 h-8 mb-4" size={30} />, 
   },
   {
-    icon: <FaCheckCircle className="text-green-500 w-8 h-8 mb-4" />,
-    title: "Quality control of each part",
-    description: "Every unit you send is checked carefully for every detail.",
+    title: "Risco Engenharia",
+    description: "Cobertura abrangente para projetos de engenharia civil, obras e construções, protegendo contra imprevistos que possam comprometer o cronograma ou causar prejuízos financeiros significativos.",
+    icon: <FaHardHat className="text-green-500 w-8 h-8 mb-4" size={30} />,
   },
   {
-    icon: <FaHeadset className="text-green-500 w-8 h-8 mb-4" />,
-    title: "Reliable customer service",
-    description: "Our customer service is available 24 hours a week, with qualified people.",
+    title: "Responsabilidade Civil",
+    description: "Protege sua empresa contra danos involuntários causados a terceiros, garantindo cobertura em casos de lesões corporais, danos materiais ou financeiros, gerando confiança e segurança jurídica.",
+    icon: <FaBuilding size={30} className="text-green-500 w-8 h-8 mb-4"/>,
   },
   {
-    icon: <FaBook className="text-green-500 w-8 h-8 mb-4" />,
-    title: "Maintenance manual book",
-    description: "We provide a guidebook that can be used to ensure maximum care.",
+    title: "Riscos Nomeados e Operacionais",
+    description: "Seguros personalizados para cobrir riscos operacionais e nomeados específicos do seu negócio, garantindo proteção em situações adversas e imprevistas, minimizando impactos financeiros.",
+    icon: <FaUsers size={30} className="text-green-500 w-8 h-8 mb-4"/>,
   },
   {
-    icon: <FaShippingFast className="text-green-500 w-8 h-8 mb-4" />,
-    title: "Delivered safely",
-    description: "Every unit we send arrives safely and quickly, without any obstacles or drama.",
+    title: "Frota",
+    description: "Seguro especializado para cobrir toda a sua frota de veículos, garantindo tranquilidade com a proteção contra acidentes, roubos e outros incidentes que podem ocorrer no transporte de cargas ou passageiros.",
+    icon: <FaCar size={30} className="text-green-500 w-8 h-8 mb-4"/>,
   },
   {
-    icon: <FaRobot className="text-green-500 w-8 h-8 mb-4" />,
-    title: "Based on artificial intelligence",
-    description: "You can control and view each unit from your phone, it’s very easy to use.",
+    title: "Saúde",
+    description: "Planos de saúde corporativos desenhados para atender as necessidades de empresas de todos os tamanhos, com cobertura completa para garantir o bem-estar dos colaboradores e suas famílias.",
+    icon: <FaHeartbeat size={30} className="text-green-500 w-8 h-8 mb-4"/>,
   },
 ];
 
@@ -45,12 +45,12 @@ const FeaturesSection = () => {
         </h2>
       </div>
 
-      <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y divide-gray-200 lg:divide-y-0 lg:divide-x">
+      <div className="max-w-5xl mx-auto  overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  p-4">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col items-start p-6 bg-white"
+              className="flex flex-col items-start p-6 bg-white border-2 border-gray-100 rounded-lg"
             >
               {feature.icon}
               <h3 className="text-lg font-semibold text-gray-800 mb-2">
