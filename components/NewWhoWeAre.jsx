@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { FaArrowRight } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
-import solarImage from "../public/img/roi3.jpeg"; // Substitua pelo caminho da sua imagem
+import solarImage from "../public/img/roi3.jpeg"; 
 
 const NewWhoWeAre = () => {
   return (
@@ -18,17 +18,18 @@ const NewWhoWeAre = () => {
         {/* Botão com espaçamento responsivo */}
         <div className="space-y-8 lg:space-y-20">
           <button className="flex items-center space-x-2 px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600">
-            <span>Conheça mais</span>
-            <FaArrowRight />
+          <FaLinkedin />
+            <span>Conecte-se</span>
+            
           </button>
 
           {/* Cards com espaçamento menor em mobile */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              { number: "25+", title: "Mais de 25 anos de mercado" },
-              { number: "02", title: "Solar panels for industry" },
-              { number: "03", title: "Solar panels for chargers" },
-              { number: "04", title: "Wind power generator" },
+              { number: "25+", title: "Mais de 25 anos de mercado." },
+              { number: "50+", title: "Soluções personalizadas entregues em 2024" },
+              { number: "500+", title: "Clientes atendidos em todo o Brasil." },
+              { number: "100%", title: "Focada em soluções personalizadas." },
             ].map((item, index) => (
               <div
                 key={index}
@@ -45,7 +46,7 @@ const NewWhoWeAre = () => {
 
       {/* Coluna Direita */}
       <div className="lg:w-1/2 w-full flex justify-center items-center">
-        <div className="relative w-full h-[500px] lg:h-full rounded-2xl overflow-hidden">
+        <div className="relative w-full h-[500px] lg:h-full rounded-2xl overflow-hidden md:max-w-[400px] sm:max-w-[400px]">
           <Image
             src={solarImage}
             alt="Man holding solar panel"
