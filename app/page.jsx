@@ -22,10 +22,9 @@ export default function Home() {
       <NewNavbar />
       <HeyHero />
       
-      <AnotherHero  />
+      
       <Services2 />
-      <FeaturesSection />
-      <ServicesAlt />
+      
       <NewWhoWeAre />
       <WhoWeAre />
       <Believe />
