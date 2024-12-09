@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCar, FaHeartbeat, FaHardHat, FaBuilding, FaUsers, FaShieldAlt } from "react-icons/fa";
-import './styles.css'; // Certifique-se de que o arquivo CSS está importado corretamente
+import './styles.css';
 
 const servicesData = [
   {
@@ -13,27 +13,27 @@ const servicesData = [
   {
     title: "Risco Engenharia",
     description: "Cobertura abrangente para projetos de engenharia civil, obras e construções, protegendo contra imprevistos que possam comprometer o cronograma ou causar prejuízos financeiros significativos.",
-    icon: <FaHardHat size={32} />,
+    icon: <FaHardHat size={32} />, 
   },
   {
     title: "Responsabilidade Civil",
     description: "Protege sua empresa contra danos involuntários causados a terceiros, garantindo cobertura em casos de lesões corporais, danos materiais ou financeiros, gerando confiança e segurança jurídica.",
-    icon: <FaBuilding size={32} />,
+    icon: <FaBuilding size={32} />, 
   },
   {
     title: "Riscos Nomeados e Operacionais",
     description: "Seguros personalizados para cobrir riscos operacionais e nomeados específicos do seu negócio, garantindo proteção em situações adversas e imprevistas, minimizando impactos financeiros.",
-    icon: <FaUsers size={32} />,
+    icon: <FaUsers size={32} />, 
   },
   {
     title: "Frota",
     description: "Seguro especializado para cobrir toda a sua frota de veículos, garantindo tranquilidade com a proteção contra acidentes, roubos e outros incidentes que podem ocorrer no transporte de cargas ou passageiros.",
-    icon: <FaCar size={32} />,
+    icon: <FaCar size={32} />, 
   },
   {
     title: "Saúde",
     description: "Planos de saúde corporativos desenhados para atender as necessidades de empresas de todos os tamanhos, com cobertura completa para garantir o bem-estar dos colaboradores e suas famílias.",
-    icon: <FaHeartbeat size={32} />,
+    icon: <FaHeartbeat size={32} />, 
   },
 ];
 
@@ -60,16 +60,21 @@ export default function Services2() {
             <motion.div
               key={index}
               className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start text-left"
-              
               initial="hidden"
               animate="visible"
               exit="exit"
               variants={cardVariants}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              whileHover={{ boxShadow: "0px 0px 20px 5px rgba(14, 165, 233, 0.5)" }}
+              whileHover={{
+                scale: 1.05,
+                rotate: 2,
+                transition: { duration: 0.3, ease: "easeOut" },
+              }}
             >
               <motion.div
                 className="bg-sky-700 p-2 rounded-lg text-white mb-4"
+                whileHover={{ backgroundColor: "#38bdf8" }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 {service.icon}
               </motion.div>
