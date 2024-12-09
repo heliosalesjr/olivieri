@@ -26,7 +26,7 @@ export default function Home() {
       <Services2 />
       
       <NewWhoWeAre />
-      <WhoWeAre />
+     
       <Believe />
       <NewPartners />
       <Partners />
