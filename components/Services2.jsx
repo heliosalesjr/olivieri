@@ -45,21 +45,21 @@ const cardVariants = {
 
 export default function Services2() {
   return (
-    <div id="seguro-empresarial" className="believe-section flex items-center justify-center py-12">
-      <div className="max-w-6xl w-full bg-white bg-opacity-40 rounded-lg p-8 shadow-lg">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl mb-4">
+    <div id="seguro-empresarial" className="believe-section bg-slate-400 flex items-center justify-center py-16 px-8">
+      <div className="max-w-7xl w-full bg-white bg-opacity-40 rounded-lg p-12 shadow-lg">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl mb-6 font-bold leading-tight">
             Serviços Planejados para seu Negócio
           </h2>
-          <p className="text-lg font-light text-slate-700 max-w-2xl mx-auto">
+          <p className="text-lg font-light text-slate-700 max-w-3xl mx-auto">
             Com o seguro garantia, seus projetos ganham mais segurança e credibilidade, garantindo o cumprimento de contratos e proteção financeira em negociações.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {servicesData.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl shadow-md p-6 flex flex-col items-start text-left"
+              className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-start text-left"
               initial="hidden"
               animate="visible"
               exit="exit"
@@ -72,14 +72,14 @@ export default function Services2() {
               }}
             >
               <motion.div
-                className="bg-sky-700 p-2 rounded-lg text-white mb-4"
+                className="bg-sky-700 p-4 rounded-lg text-white mb-6"
                 whileHover={{ backgroundColor: "#38bdf8" }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 {service.icon}
               </motion.div>
-              <h1 className="text-xl font-semibold mb-2">{service.title}</h1>
-              <p className="text-gray-600 text-sm">{service.description}</p>
+              <h1 className="text-2xl font-semibold text-slate-600 mb-4">{service.title}</h1>
+              <p className="text-slate-700 text-sm leading-relaxed">{service.description}</p>
             </motion.div>
           ))}
         </div>

@@ -35,7 +35,7 @@ export function Believe() {
   };
 
   return (
-    <section className=" py-16 px-6 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/img/believe2.jpg')"}}>
+    <section className=" py-16 px-6 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/img/believe1.jpg')"}}>
       <div className="absolute inset-0 bg-sky-900 opacity-40"></div>
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0 relative">
         {/* Primeira Coluna - Título, Parágrafo e Botão */}
@@ -62,8 +62,8 @@ export function Believe() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
               {/* Título com underline colorido */}
-              <h3 className="card-title text-2xl font-semibold mb-2">{card.title}</h3>
-              <p className="text-gray-600">{card.description}</p>
+              <h3 className="card-title text-2xl font-semibold mb-4">{card.title}</h3>
+              <p className="text-slate-700">{card.description}</p>
             </motion.div>
           ))}
         </div>
