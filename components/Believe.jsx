@@ -35,7 +35,7 @@ export function Believe() {
   };
 
   return (
-    <section className="believe-section bg-light-gray py-16 px-6 relative overflow-hidden">
+    <section className="believe-section bg-slate-500 py-16 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
         
         {/* Primeira Coluna - Título, Parágrafo e Botão */}
