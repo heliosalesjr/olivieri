@@ -29,7 +29,7 @@ export default function Home() {
      
       <Believe />
       <NewPartners />
-      <Partners />
+     
       
       <Contact />
       <Footer />
