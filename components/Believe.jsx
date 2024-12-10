@@ -35,16 +35,16 @@ export function Believe() {
   };
 
   return (
-    <section className="believe-section bg-slate-500 py-16 px-6 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
-        
+    <section className=" py-16 px-6 relative overflow-hidden bg-cover bg-center bg-no-repeat" style={{backgroundImage: "url('/img/believe2.jpg')"}}>
+      <div className="absolute inset-0 bg-sky-900 opacity-40"></div>
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0 relative">
         {/* Primeira Coluna - Título, Parágrafo e Botão */}
         <div className="flex flex-col justify-center items-center text-center md:w-1/2">
-          <h1 className="text-5xl font-extrabold mb-4 text-slate-700 ">No que acreditamos</h1>
-          <p className="text-lg mb-6 max-w-md text-gray-900">
+          <h1 className="text-5xl font-extrabold mb-4 text-white ">No que acreditamos</h1>
+          <p className="text-lg mb-6 max-w-md text-white">
             Acreditamos em valores que moldam a nossa cultura e criam um ambiente de confiança, inovação e excelência.
           </p>
-          <button className="flex items-center bg-yellow-500 text-gray-800 px-6 py-3 rounded-full shadow-lg hover:bg-yellow-400 transition">
+          <button className="flex items-center bg-sky-400 text-slate-900 px-6 py-3 rounded-lg shadow-lg hover:bg-sky-300 transition font-bold">
             Saiba mais <FaArrowRight className="ml-2" />
           </button>
         </div>
@@ -73,3 +73,4 @@ export function Believe() {
 }
 
 export default Believe;
+
