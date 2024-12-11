@@ -14,11 +14,12 @@ const NewWhoWeAre = () => {
           <Image
             src={solarImage}
             alt="Man holding solar panel"
-            layout="fill"
-            objectFit="cover"
+            fill
+            style={{ objectFit: "cover" }}
             className="rounded-2xl"
           />
         </div>
+      
       </div>
 
       {/* Coluna Esquerda */}
