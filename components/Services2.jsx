@@ -60,7 +60,7 @@ export default function ServicesWithCarousel() {
   }, []);
 
   return (
-    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-8 py-16 px-4 max-w-5xl mx-auto h-[600px]">
+    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-8 py-20 px-6 max-w-6xl mx-auto">
       {/* Texto */}
       <div className="lg:w-1/2 w-full flex flex-col items-center justify-center text-center">
         <h2 className="text-5xl font-bold leading-tight mb-6">
@@ -72,23 +72,23 @@ export default function ServicesWithCarousel() {
       </div>
 
       {/* Carrossel */}
-      <div className="lg:w-1/2 w-full relative flex items-center justify-center">
+      <div className="lg:w-1/2 w-full relative bg-sky-200 p-6 rounded-xl shadow-lg flex items-center justify-center">
         {/* Navegação */}
         <button
           onClick={prevCard}
-          className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg z-10 hover:bg-slate-200"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg z-10 hover:bg-slate-200"
         >
           <FaChevronLeft size={24} />
         </button>
         <button
           onClick={nextCard}
-          className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg z-10 hover:bg-slate-200"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg z-10 hover:bg-slate-200"
         >
           <FaChevronRight size={24} />
         </button>
 
         {/* Cards */}
-        <div className="relative w-full max-w-lg h-72 overflow-hidden flex items-center justify-center">
+        <div className="relative w-full max-w-lg h-72 flex items-center justify-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
@@ -97,12 +97,12 @@ export default function ServicesWithCarousel() {
               animate="visible"
               exit="exit"
               transition={{ duration: 0.5 }}
-              className="bg-white rounded-xl shadow-lg p-8 flex flex-col items-center text-center"
+              className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center max-w-sm"
             >
-              <div className="bg-sky-700 text-white rounded-full p-6 mb-6">
+              <div className="bg-sky-700 text-white rounded-full p-6 mb-4">
                 {servicesData[currentIndex].icon}
               </div>
-              <h3 className="text-2xl font-semibold text-slate-700 mb-4">
+              <h3 className="text-2xl font-semibold text-slate-700 mb-2">
                 {servicesData[currentIndex].title}
               </h3>
               <p className="text-slate-600 text-sm leading-relaxed">
