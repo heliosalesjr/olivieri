@@ -7,7 +7,7 @@ import solarImage from "../public/img/roi3.jpeg";
 
 const NewWhoWeAre = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:items-stretch max-w-5xl mx-auto min-h-[80vh] py-20 px-6 gap-12">
+    <div className="flex flex-col lg:flex-row items-center lg:items-stretch max-w-6xl mx-auto min-h-[80vh] py-20 px-6 gap-12">
       {/* Coluna Direita */}
       <div className="lg:w-1/2 w-full flex justify-center items-center">
         <div className="relative w-full h-[500px] lg:h-full rounded-2xl overflow-hidden md:max-w-[400px] sm:max-w-[400px]">

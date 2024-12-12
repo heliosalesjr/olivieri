@@ -60,19 +60,22 @@ export default function ServicesWithCarousel() {
   }, []);
 
   return (
-    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-8 py-20 px-6 max-w-6xl mx-auto">
+    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-8 py-20 px-6 max-w-7xl mx-auto">
       {/* Texto */}
       <div className="lg:w-1/2 w-full flex flex-col items-center justify-center text-center">
-        <h2 className="text-5xl font-bold leading-tight mb-6">
+        <h2 className="text-4xl font-bold leading-tight mb-6">
           Serviços Planejados para seu Negócio
         </h2>
         <p className="text-lg font-light text-slate-700 max-w-xl">
-          Com o seguro garantia, seus projetos ganham mais segurança e credibilidade, garantindo o cumprimento de contratos e proteção financeira em negociações.
+          Com o seguro garantia, seus projetos ganham mais segurança e credibilidade, garantindo o cumprimento de contratos e proteção financeira em negociações, e ainda temos muitos outros serviços.
         </p>
       </div>
 
       {/* Carrossel */}
-      <div className="lg:w-1/2 w-full relative bg-sky-200 p-6 rounded-xl shadow-lg flex items-center justify-center">
+      <div className="lg:w-1/2 w-full bg-slate-200 relative p-6 rounded-xl shadow-lg flex flex-col items-center justify-start py-16">
+        {/* Título */}
+        
+
         {/* Navegação */}
         <button
           onClick={prevCard}
