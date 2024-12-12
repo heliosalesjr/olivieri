@@ -60,7 +60,7 @@ export default function ServicesWithCarousel() {
   }, []);
 
   return (
-    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-8 py-16 px-4 max-w-7xl mx-auto">
+    <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-8 py-16 px-4 max-w-5xl mx-auto h-[600px]">
       {/* Texto */}
       <div className="lg:w-1/2 w-full flex flex-col items-center justify-center text-center">
         <h2 className="text-5xl font-bold leading-tight mb-6">
